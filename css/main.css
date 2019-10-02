@@ -1,0 +1,462 @@
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap&subset=latin-ext');
+
+html {
+  line-height: 1.4;
+  box-sizing: border-box;
+  font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/** Globales ***/
+.button{
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.button-one{
+  border:solid 1px #b28ca2;
+}
+img {
+  max-width: 100%;
+}
+.contenedor {
+  width: 95%;
+  max-width: 120rem; /** = 1200px; **/
+  margin: 0 auto;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 2rem;
+}
+p{
+  font-size: 1.5rem;
+}
+.title{
+  width: .8rem;
+  height: .8rem;
+  background: #CB98CE;
+  display: inline-block;
+  position: relative;
+  top: -3.2rem;
+  text-align: center;
+}
+.title::before{
+content: '';
+border: 1px solid #CB98CE;
+width: 20px;
+position: absolute;
+right: 15px;
+top: 3px;
+}
+.title::after{
+content: '';
+border: 1px solid #CB98CE;
+width: 20px;
+position: absolute;
+left: 15px;
+top: 3px;
+}
+/*-----CODE WEBSITE-----*/
+.content{
+    width: 95%;
+    max-width: 120rem; /** = 1200px; **/
+    margin: 0 auto;
+}
+/*************HEADER************************/
+.site-header{
+  background-image: url(../img/img-svg/tarot-991041_960_720.svg);
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  animation: movimiento 10s infinite linear alternate;
+}
+@keyframes movimiento{
+  from{
+      background-position: bottom left;
+  }
+  to{
+      background-position: top right;
+  }
+}
+.icon-menu{
+    background-color:transparent;
+    right: 0;
+    color: #fff;
+    font-size: 3.5rem;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav{
+    display: none;
+}
+.logo{
+  max-width: 14rem;
+  height: 14rem;
+}
+.logo-left{
+  max-width: 15rem;
+  height: 15rem;
+
+}
+.logo{
+  display: none;
+}
+@media(min-width: 768px){
+  .site-header{
+    height: 100vh;
+  }
+  .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon-menu{
+    display: none;
+  }
+  .nav a{
+    color: #ffffff;
+    font-size: 1.8rem;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 3rem;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  .nav a:hover{
+    color: #CB98CE;
+  }
+  .nav a:last-of-type{
+    margin: 0;
+  }
+  .nav{
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem; 
+  }
+  .logo-left{
+    display: none;
+  }
+  .logo{
+    display: inline;
+  }
+}
+/*************Banner************************/
+.banner{
+  display: flex;
+  justify-content:space-evenly;
+}
+.info{
+  margin-top: 3rem;
+  padding: 1rem 0;
+  text-align: center;
+  max-width: 40rem;
+  height: 25rem;
+}
+.info h2{
+  color: #CB98CE;
+  font-family: 'Zilla Slab', serif;
+  letter-spacing: 0.8rem;
+  font-weight: 100;
+}
+.info p{
+  color: #ffffff;
+  text-align: justify;
+  font-family: 'Libre Baskerville', serif;
+  margin-top: -3rem;
+  font-weight: 100;
+  margin-bottom: 5rem;
+}
+.button-one{
+  color: #ffffff;
+}
+.list{
+  align-items: center;
+  display: none;
+  max-width: 40.1rem;
+  list-style:none;
+  margin-left: 5rem;
+}
+.list li{
+  width: 100%;
+  margin-top: 2rem;
+}
+.list li:first-of-type{
+  margin-top: 0;
+}
+.list li a{
+  text-decoration: none;
+  list-style: none;
+  color: #CB98CE;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem;
+  
+}
+
+.list li i:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #b28ca2;
+  border: solid 0.2rem rgba(255, 255, 255, 0.1);
+}
+@media(min-width:768px){
+  .list{
+    display: block;
+  }
+  .list li i{
+      margin-right: 2rem;
+      font-size: 3.8rem;
+      color: #ffffff;
+      border: solid 0.2rem #b28ca2;
+      border-radius: 50%;
+      padding: 1rem;
+      cursor: pointer;
+      transition: ease 0.5s;
+      background-color: rgba(203, 152, 206, 0.4);
+    }
+  .list li a{
+    font-size: 1.7rem;
+  }
+}
+@media(min-width:1200px){
+  .list li i {
+    font-size: 4.5rem;
+  }
+}
+/*****************SERVICE-MAIN*****************/
+  .service-main{
+    display: block;
+  }
+  .service{
+    border: solid 1px #f7f7f7;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .service img{
+    padding: .5rem;
+    width: 100%;
+  }
+  .service-main h1, .service-main p{
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #CB98CE;
+ }
+ .service-main h1{
+    margin-bottom: 4rem;
+ }
+ .service p, .service h3{
+    color: #4A6772;
+    text-align: center;
+ }
+ .service h3{
+    margin: 1rem 0;
+ }
+ .service p{
+    margin-top: 0;
+ }
+ @media(min-width:768px){
+  .service-main{
+    display: flex;
+    margin-top: -2rem;
+ }
+ .service{
+  margin-right: 1rem;
+  border: solid 1px transparent;
+}
+  .service img:last-of-type{
+    margin-bottom: 0;
+ }
+ .service:last-of-type{
+   margin-right: 0;
+ }
+ .service-main h1, .t-service{
+    display: none;
+  }
+ }
+ /*****************Horoscopo*****************/
+ #particles-js{
+  width:100%;
+  height: 105rem;
+  background-color:rgba(0, 0, 0, .0);
+}
+ .horoscopo-content{
+  /*background-image: url(../img/horoscopo/galaxy-2643089_1920.svg);*/
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 1);
+  margin-top: -105rem;
+}
+.horoscopo{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.horoscopo-content h1{
+  padding-top: 5rem;
+}
+.horoscopo-img{
+  grid-gap: 3rem;
+}
+.horoscopo-img img{
+  padding: 2rem;
+}
+.horoscopo-content h1, .horoscopo-content p{
+  color: #CB98CE;
+  text-align: center;
+}
+@media(min-width: 768px){
+  .horoscopo{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media(min-width: 1200px){
+  .horoscopo{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .horoscopo-img img{
+    padding: 4rem;
+  }
+}
+/***************PRODUCT***********/
+.product{
+  background-image: url(../img/Productos/fondo.png);
+  background-position: center;
+  background-size: cover;
+}
+.product h2, .product h6{
+  text-align: center;
+  color: #CB98CE;
+}
+.product h2{
+  top: -3rem;
+}
+.product p{
+  text-align: center;
+  margin-top: -3rem;
+  margin-bottom: 5rem;
+}
+.product-txt{
+  width: 70%;
+  margin: 0 15%;
+  color: #4A6772 !important;      
+}
+.product-sale a{
+  margin-top: -3rem;
+  margin-bottom: 2rem;
+}
+.product-sale p{
+  margin-top: 1rem;
+}
+.content-product{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem 2rem;
+  margin-bottom: 7rem;
+}
+.product-sale img {
+  padding: 1rem;
+  width: 100%;
+}
+.product-sale h4{
+  text-align: center;
+  margin: 0;
+}
+.button-buy{
+  text-align: center;
+  background-color: #CB98CE;
+  color: #fff;
+  display: block;
+  width: 80%;
+  margin: 0 10%;
+}
+.product-sale{
+  box-shadow: 5px 5px 15px #666666; 
+  background-color: transparent;
+}
+@media(min-width:768px){
+  .content-product{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media(min-width:1200px){
+  .content-product{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/***************CONTADORES***********/
+.contador{
+  background-image: url(../img/img-svg/siegessaule-3592866_1920.svg);
+  background-position: center;
+  background-size: cover;
+  height: 80rem;
+  color: #ffffff;
+}
+.contador h2{
+  text-align: center;
+  padding-top:  2rem;
+  margin: 0 auto;
+}
+.contador h3{
+  margin: 0 auto;
+  text-align: center;
+}
+.number-aleatorio{
+  display: block;
+  padding-top: 7rem;
+}
+.number-aleatorio li{
+  text-decoration: none;
+  list-style: none;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 5rem;
+}
+.number-aleatorio li p{
+  font-size: 5rem;
+  margin: 0 auto;
+}
+@media(min-width:1200px){
+  .number-aleatorio{
+    display: flex;
+    justify-content: space-between;
+  }
+  .contador{
+    height: 70vh;
+  }
+}
+/*************Blog**************/
+ .blog{
+   text-align: center;
+ }
+ .blog h1{
+   color: #CB98CE;
+ }
+ .notice img{
+  width: 100%;
+ }
+ .notice h3{
+   text-transform: uppercase;
+   color: #b28ca2;
+   margin-bottom: 0;
+  
+ }
+ .notice p{
+   padding: 1rem 2rem;
+   color: #4A6772;
+   text-align: justify !important;
+ }
