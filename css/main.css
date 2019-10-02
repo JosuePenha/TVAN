@@ -448,15 +448,33 @@ top: 3px;
  }
  .notice img{
   width: 100%;
- }
+ } 
  .notice h3{
    text-transform: uppercase;
    color: #b28ca2;
    margin-bottom: 0;
-  
  }
  .notice p{
    padding: 1rem 2rem;
    color: #4A6772;
    text-align: justify !important;
+ }
+ .notice p a{
+   text-decoration: none;
+   list-style: none;
+   color: #b28ca2;
+   text-transform: initial;
+   font-weight: 700;
+ }
+ @media(min-width:768px){
+   .notice-cont{
+     display: flex;
+     justify-content: space-around;
+   }
+   .notice{
+     margin-left: 2rem;
+   }
+   .notice:first-of-type{
+    margin-left: 0;
+   }
  }
